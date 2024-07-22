@@ -162,7 +162,7 @@ const Product = () =>{
                         </div>
                         <div className="likes">
                             <img src='pro8.jpeg' alt='camera'></img>
-                            <p>100+ likes & 3.0 star</p>
+                            <p>100+ likes & 3.1 star</p>
                         </div>
                         
                     </div>

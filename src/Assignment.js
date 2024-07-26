@@ -157,7 +157,7 @@ const Product = () =>{
                     </div>
                     <div className='detail'>
                         <div className='info'>
-                            <h3>Camera</h3>
+                            <h3>Nokia</h3>
                             <p>Busting social media myths at the Social Media Lab</p>
                         </div>
                         <div className="likes">

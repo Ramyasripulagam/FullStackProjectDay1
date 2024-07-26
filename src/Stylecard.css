@@ -1,0 +1,66 @@
+
+.card{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin:10px;
+    height: 400px;
+    width:280px;
+    overflow:hidden;
+    
+}
+.Img{
+    margin-left:37px;
+    margin-top: 20px;
+    width:200px;
+
+}
+img{
+    width:280px;
+    height:200px;
+}
+.rate{
+    display: flex;
+    
+}
+.star{
+    margin-top: 4px;
+    margin-right: 20px;
+}
+.rate .p1{
+    font-size: 17px;
+    font-weight: 400;
+    margin-right: 10px;
+    color: rgba(0, 0, 0, 0.493);
+}
+.cost{
+    display: flex;
+    margin-top: -10px;
+}
+.cost h5{
+    font-size: 15px;
+    margin-right: 18px;
+}
+.cost h6{
+    font-size: 13px;
+   
+    color: rgba(0, 0, 0, 0.264);
+    text-decoration:line-through;
+}
+.btn{
+    margin-left: -9px;
+    margin-top: -10px;
+}
+.btn button{
+    background-color: rgb(245, 163, 10);
+    border-radius: 7px;
+    width:270px;
+    height:35px;
+}
+button:hover{
+    border:1px solid rgba(0, 0, 0, 0.321);
+    background-color: transparent;
+}
+.checked {
+    color: orange;
+}

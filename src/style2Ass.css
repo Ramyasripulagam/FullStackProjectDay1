@@ -1,0 +1,34 @@
+.Body-main{
+    margin:20px;
+}
+
+.Body-main .body-part{
+    border:1px solid rgba(0, 0, 0, 0.142);
+}
+.image{
+    display: flex;
+    flex-direction: row;
+    border:1px solid rgba(0, 0, 0, 0.142);
+}
+.main .body-part .image img{
+    width:900px;
+    height:250px;
+
+}
+.btn1{
+    margin-bottom: 8px;
+}
+.secPart{
+    margin:10px;
+}
+.main p{
+    color:rgba(0, 0, 0, 0.325);
+}
+input{
+    border:1px solid rgba(0, 0, 0, 0.182);
+    padding-left:2px;
+}
+.reviews{
+    margin:13px;
+    margin-top: 20px;
+}

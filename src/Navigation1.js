@@ -12,7 +12,7 @@ function Navigation1(){
             <Link to="/products"  style={{textDecoration:'none',marginLeft:'10px',color:'black'}}>Products</Link>
         </div>
         <div style={{display:'flex',gap:'10px',cursor:'pointer'}}>
-        <Link to="/cart" style={{textDecoration:'none',marginLeft:'10px',color:'black'}}>Cart{globalCount}</Link>
+        <Link to="/" style={{textDecoration:'none',marginLeft:'10px',color:'black'}}>Cart{globalCount}</Link>
         <Link to="/profile"  style={{textDecoration:'none',marginLeft:'10px',color:'black'}}>Profile</Link>
         <Link to="/"  style={{textDecoration:'none',marginLeft:'10px',color:'black'}}>Logout</Link>
     </div>

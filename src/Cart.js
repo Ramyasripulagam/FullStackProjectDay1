@@ -1,8 +1,9 @@
 
 
-export default function Cart(){
+function CART(){
 
     return(
-        <div><h1>Cart</h1></div>
+        <div><h1>cart</h1></div>
     )
 }
+export default CART;

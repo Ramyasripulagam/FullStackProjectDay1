@@ -4,7 +4,7 @@ import CardListUI from "./CardList";
 import { createContext,useState} from "react";
 import Profile from "./Profile";
 import Home from "./Home";
-import Cart from "./Cart";
+import CART from "./CART";
 
 
 export const globalContext=createContext();
@@ -20,9 +20,9 @@ function App(){
                 <Route path="/" element={<Home/>}/>
                 <Route path="/products" element={<CardListUI/>}/>
                 <Route path="/profile" element={<Profile/>}/>
-                <Route path="/cart" element={<Cart/>}/>
+                <Route path="/cart" element={<CART/>}/>
                 <Route path="/" element={<TabFun2/>}/>
-\
+
             </Routes>
         </BrowserRouter>
         </globalContext.Provider>

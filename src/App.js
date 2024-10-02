@@ -2,7 +2,6 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import CardListUI from "./CardList";
 import { createContext,useState} from "react";
 import Profile from "./Profile";
-import Home from "./Home";
 import CartProducts from "./CartProducts";
 import LoginPage from "./LoginPage";
 import StartWelcome from "./StartWelcome"

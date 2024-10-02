@@ -1,0 +1,62 @@
+.Regis-body{
+    background-image: url('https://png.pngtree.com/thumb_back/fw800/back_our/20190621/ourmid/pngtree-double-twelve-yellow-e-commerce-carnival-banner-image_181427.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width:100vw;
+    height:100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container-signup{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width:360px;
+    height:600px;
+    border:1px solid rgb(250, 249, 249);
+    border-radius: 20px;
+    background-color: rgba(74, 70, 70, 0.59);
+}
+.sign-form{
+    display: flex;
+    flex-direction: column;
+    align-items:start;
+    justify-content: center;
+    gap:5px;
+    width:300px;
+    height:450px; 
+    margin-top: 10px;    
+}
+.container-signup img{
+    margin-top: 10px;
+    width:170px;
+    height:100px;
+    border-radius: 100% 100% 100% 100%;
+}
+.sign-form h2{
+    color: white;
+    text-decoration: underline;
+}
+.sign-form p{
+    margin-bottom: 0px;
+    color:white;
+}
+.btn-submit{
+    margin-left: 80px;
+    margin-top: 18px;
+}
+.btn-submit button{
+    width:150px;
+    height:40px;
+}
+form .sign-form input{
+    border-radius: 14px; 
+    width:300px;
+    height:50px;
+}
+form .sign-form .match{
+    color:white;
+    margin-left: 50px;
+}

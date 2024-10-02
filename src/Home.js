@@ -1,7 +1,7 @@
 import {createContext, useContext, useState} from 'react';
 import Welcome from './Welcome';
-import TabFun2 from './TabFun2';
 import { globalContext } from './App';
+import LoginPage from './LoginPage';
 
 //export const UserContext=createContext();//create context 
 function Home(){
@@ -12,7 +12,7 @@ function Home(){
             globalIsLogin?
             <Welcome/>
             
-            :<TabFun2/>
+            :<LoginPage/>
             }
         </div>
     );

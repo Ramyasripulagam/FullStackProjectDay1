@@ -1,23 +1,36 @@
-
+.products-body{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 .card{
     display:flex;
     flex-direction: column;
     justify-content: space-between;
     margin:10px;
-    height: 400px;
-    width:280px;
+    height: 350px;
+    width:250px;
     overflow:hidden;
+    box-shadow:0px 1px 4px -1px gray;
     
 }
 .Img{
     margin-left:37px;
     margin-top: 20px;
-    width:200px;
+    width:150px;
 
 }
 img{
-    width:280px;
-    height:200px;
+    width:150px;
+    height:150px;
+}
+.details{
+    padding:10px;
+}
+.details h6{
+    font-size: 12px;
+
 }
 .rate{
     display: flex;
@@ -48,19 +61,54 @@ img{
     text-decoration:line-through;
 }
 .btn{
+    border:none;
     margin-left: -9px;
     margin-top: -10px;
 }
 .btn button{
-    background-color: rgb(245, 163, 10);
-    border-radius: 7px;
-    width:270px;
+    background-color: #f3cf40;
+    border:none;
+    border-radius: 50px;
+    width:190px;
     height:35px;
 }
 button:hover{
-    border:1px solid rgba(0, 0, 0, 0.321);
-    background-color: transparent;
+    background-color: #060605;
+    color:white;
 }
-.checked {
-    color: orange;
+.checked{
+    color:#f3cf40;
+}
+
+@media (max-width:500px){
+    .card{
+        height:320px;
+        width:220px;
+        margin-right: 8px;
+    }
+    .btn button{
+        width:200px;
+        margin:0px;
+    }
+    .Img{
+        width:130px;
+        height:130px;
+    }
+    .Img img{
+        height:120px;
+    }
+    .cost{
+        display: flex;
+        margin-top: -10px;
+    }
+    .cost h5{
+        font-size: 12px;
+        margin-right: 18px;
+    }
+    .cost h6{
+        font-size: 12px;
+       
+        color: rgba(0, 0, 0, 0.264);
+        text-decoration:line-through;
+    }
 }

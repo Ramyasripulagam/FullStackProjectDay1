@@ -1,9 +1,24 @@
+import {useState,useContext } from "react";
+import { globalContext } from "./App";
+import './Stylecard.css';
+
+
 function CardUI(prop){
+    const {globalCount,setGlobalCount}=useContext(globalContext);
+    const [before,setafter]=useState('Add to cart');
+    const [cartnum,setCartNum]=useState(0);
+    const Incart=()=>{
+        setafter('In Cart');
+        setCartNum(cartnum+1);
+        setGlobalCount(globalCount+1);
+    }
+ 
     return (
         <div className="body">
+            
             <div className="card">
                 <div className="Img">
-                <img src={prop.Image} className="card-img-top" width={300} alt="pic"/>
+                    <img src={prop.Image} className="card-img-top" width={300} alt="pic"/>
                 </div>
                 <div className="details">
                     <h6>{prop.Title}</h6>
@@ -24,7 +39,9 @@ function CardUI(prop){
                     
                 </div>
                 <div className="btn">
-                    <button><i class="fa fa-shopping-cart"></i> Add to cart</button>
+                    
+                    <button onClick={Incart}><i class="fa fa-shopping-cart"></i>{before}{cartnum}</button>
+                    
                 </div>
             </div>
         </div>

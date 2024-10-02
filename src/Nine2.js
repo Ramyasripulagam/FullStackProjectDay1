@@ -11,7 +11,6 @@ function Nine2(){
             return setCount(0)
         }else{
             setCount(count-1);
-            setGlobalCount(globalCount+1)
         }
         
     }
@@ -24,16 +23,23 @@ function Nine2(){
     }
     
     return(
-        <div style={{display:'flex'}}>
+        <div>
+            {(count == 0) ? 
+            <button className="btn btn-outline-dark btn-sm" 
+            onClick={Addtocart}> Add to Cart </button>
+            :
+            
+            <div style={{display:'flex'}}>
+            
             
             <div style={{display:'flex',margin:'10px'}}>
             <button className="btn btn-outline-dark " onClick={btnDecreament}>-</button>
             <h4 style={{margin:'10px'}}>{count}</h4>
             <button className="btn btn-outline-dark" onClick= {btnIncreament}>+</button>
             </div>
-            <div style={{margin:'20px'}}>
-            <button  className="btn btn-primary btn-sm" type="button" onClick= {Addtocart}>Add to cart</button>
+           
             </div>
+            }
         </div>
     )
 }

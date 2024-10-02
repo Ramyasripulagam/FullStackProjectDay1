@@ -1,117 +1,82 @@
-import { useContext, useState } from "react";
+import { useRef, useState ,useEffect, useContext} from "react";
 import { globalContext } from "./App";
-import { createContext} from "react";
-export const loginContext=createContext();
-function RegisterPage(){
+import "./RegisterPage.css"
+import { Link, Navigate } from "react-router-dom";
 
-    const [collegeid,setCollege]=useState('');
-    const [password,setPassword]=useState('');
-    const [email,setEmail] =useState('');
-    const [Branch,setBranch]=useState('');
-    const [year,setYear]=useState('');
-    const [genderValue,setGender]=useState('');
-    const [user,setUser]=useState({});
-    const {globalUserObject,setGlobalUserObject}=useContext(globalContext);
-    
-    const getCollegeid=(event)=>{
-        console.log(event.target.value);    
-        setCollege(event.target.value);    
-    }
-    const getpassword=(event)=>{
-        console.log(event.target.value);
-        setPassword(event.target.value);
-    }
-    const getemail=(event)=>{
-        console.log(event.target.value);
-        setEmail(event.target.value);
-    }
-    const getbranch=(event)=>{
-        console.log(event.target.value);
-        setBranch(event.target.value);
-    }
-    const getyear=(event)=>{
-        console.log(event.target.value);
-        setYear(event.target.value);
-    }
-    const getGender=(event)=>{
-        console.log(event.target.value);
-        setGender(event.target.value);
-    }
-    const submitData=(event)=>{
-        event.preventDefault();
-        const obj={
-            collegeid,password,email,Branch,genderValue
+function RegisterPage(){
+    // const width=200;
+    const firstRef=useRef(null);
+    const secondRef=useRef(null);
+    const ThirdRef=useRef(null);
+    const FourthRef=useRef(null);
+    const [signupMessage,setsignupMessage]=useState('');
+    const {globalIssignup,setGlobalIssignup}=useContext(globalContext);
+
+    // useEffect to focus on input field
+    useEffect(() => {
+        if (firstRef.current) {
+            firstRef.current.focus();
         }
-        console.log(obj);
-        setGlobalUserObject(obj);
-        setUser(obj);
-        console.log(user);
-        
+    }, []);
+    if (globalIssignup) {
+        return <Navigate to="/welcome" />;
     }
+  
+
+    const formSubmitted=(event)=>{
+        event.preventDefault();
+        //to prevent default refresh after submitting
+        if(ThirdRef.current.value === FourthRef.current.value){
+            setGlobalIssignup(true);
+            setsignupMessage('');
+
+            localStorage.setItem("name",firstRef);
+            localStorage.setItem("password",ThirdRef);
+        }
+        else{
+            // console.log("Incorrect");
+            setsignupMessage("Password doesn't match");
+            //print on user interface
+        }
     
+        //clear value in text area after submitting
+    }
+   
 
     return(
-        <loginContext.Provider value={{collegeid,setCollege,password,setPassword}}>
+        <div className="Regis-body">
+            
+            <div className="container-signup" > 
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOI-mF2zw6nrMP7PTpyUwSQcHolkKSipFHG87rHQjmkv09wk4svr2RwZ9gLEePcMxgbfQ&usqp=CAU" alt="EcoRa"></img>
 
-        <div style={{height:'100vh',display:'flex',alignItems:'center',justifyContent:'center',marginTop:'70px'}}>
-            
-            <div class="card" style={{width:'20rem',height:'34rem'}}>
-                <div class="card-body">
-                <h5 class="card-title">Register</h5> 
-                <p class="card-subtitle mb-2 text-body-secondary">Provide your details to register</p>
-                <form>
-                    <div style={{display:'flex',flexDirection:'column',justifyContent:'space-evenly',gap:'10px'}}>
-                    <div>
-                    <label>College id</label>
-                    <input type="text" onChange={getCollegeid} autoFocus placeholder="College id"required></input></div>
-                    <div>
-                    <label>Password</label>
-                    <input type="password" onChange={getpassword}  placeholder="Password"  required></input>
-                    </div>
-                    <div>
-                    <label>Email address</label>
-                    <input type="email"onChange={getemail}  placeholder="Email address"  required></input>
-                    </div>
-                    <div>
-                    <label>Branch</label><br/>
-                    <select value={Branch} onChange={getbranch} style={{width:'286',height:'37px',border:'1px solid #e3dddd' ,borderRadius:'5px' }}>
-                        <option value="">Select a branch</option>
-                        <option value="AIML">AIML</option>
-                        <option value="CSE">CSE</option>
-                        <option value="AIDS">AIDS</option>
-                        <option value="EEE">EEE</option>
-                        <option value="IT">IT</option>
-                        <option value="CS">CS</option>
-                    </select>
-                    </div>
-                    <div>
-                    <label>Year</label><br/>
-                    <select name="cars" id="cars"value={year} onChange={getyear}  style={{width:'286',height:'37px',border:'1px solid #e3dddd' ,borderRadius:'5px' }}>
-                        <option value="">Select a year</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                    </select>
-                    </div>
-                    
-                    <label >Gender</label>
-                        <div  style={{display:'flex',flexDirection:'row',justifyContent:'flex-start',gap:'10px'}} >
-                            <input type="radio" checked={genderValue=="true"} value="male" onChange={getGender} ></input>Male
-                            <input type="radio"  checked={genderValue=="false"} value="female" onChange={getGender}></input>Female
-                        </div>
-                    </div>
-                    
-                    <div style={{display:'flex',justifyContent:'center',marginTop:'15px'}}>
-                    <button type="button" className="btn btn-dark" onClick={submitData} >Register</button></div>
-                </form>
-                </div>
                 
+                    <form onSubmit={formSubmitted} >
+                        <div class="sign-form">
+                        <h2>Signup</h2>
+                        <p>Provide your details to signup</p>
+                        <label><b>Name</b></label>
+                        <input type="text" ref={firstRef} required/>
+                        <label><b>Email</b></label>
+                        <input type="email" ref={secondRef} required/>
+                        <label><b>Password</b></label>
+                        <input type="password" ref={ThirdRef} required/>
+                        <label><b>Conform Password</b></label>
+                        <input type="password" ref={FourthRef} required/>
+
+                        <div className="btn-submit">
+                        <button type="submit" className="btn btn-dark">Signup</button>
+                        </div>
+
+                        <p className="hidden">Already have an account <Link to="/loginpage">LoginUp</Link></p>
+                        <div class="match">
+                        {signupMessage}
+                        </div>
+                        </div>
+                    </form>
+                   
+               
             </div>
-            
         </div>
-        </loginContext.Provider>
-       
-    )
+    );
 }
 export default RegisterPage;

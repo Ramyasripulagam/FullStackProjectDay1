@@ -1,6 +1,7 @@
 import { useState } from "react"
 import RegisterPage from "./RegisterPage";
 import LoginPage from "./LoginPage";
+import Navigation from "./Navigation";
 
 function TabFun2(){
 
@@ -11,17 +12,23 @@ function TabFun2(){
     const showRegister=()=>{setChange(false)}
 
     return (
-        <div>
-            <div style={{width:'100vw',height:'100vh',display:'flex',flexDirection:'row',alignItems:'center',justifyContent:'center',marginTop:'-260px',marginBottom:'-450px'}}>
-
-            <button type="submit" onClick={showLogin} class="btn btn-dark" style={{marginRight:'20px',width:'80px'}}>login</button>
-            <button type="submit" onClick={showRegister} class="btn btn-dark">register</button></div>
-            {change ?
-                <LoginPage/>
-                :
-                <RegisterPage/>
-            }
+        <div className="main-container">
+            <Navigation/>
+            <div className="sub-container">
+                
+                <div className="container-btn">
+                    <button type="submit" onClick={showLogin} class="btn btn-dark" >login</button>
+                    <button type="submit" onClick={showRegister} class="btn btn-dark" >register</button>
+                </div>
+                <div className="Login-reg">
+                    {change ?
+                        <LoginPage/>
+                        :
+                        <RegisterPage/>
+                    }
+                </div>
+            </div>
         </div>
-    )
+    );
 }
 export default TabFun2;

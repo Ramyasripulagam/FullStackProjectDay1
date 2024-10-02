@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5); /* Dark translucent overlay */
+  backdrop-filter: blur(8px); /* Blurry background effect */
+  z-index: 1; /* Ensure the popup is above the content */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.452);
+  width: 90%; /* Increased width for larger screens */
+  max-width: 400px; /* Restrict maximum width */
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  z-index: 2; /* Keep the container above the background */
+  position: relative; /* Relative positioning to allow absolute children */
+}
+
+.small-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative; /* To properly position back button within container */
+}
+
+.small-column img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+
+.back-btn {
+  position: absolute;
+  top: -50px; /* Adjusted position for the back button */
+  left: 10px; /* Adjusted position for the back button */
+  font-size: 20px;
+}
+
+.row-1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(160deg, #892be2, #f06292);
+  border-radius: 5px;
+  padding: 20px;
+  margin-top: -70px;
+  height:230px;
+  width: 350px; /* Set width to take the full container width */
+}
+
+.row-1 h4, .row-1 p {
+  color: white; /* Make the text color white to stand out */
+  margin: 5px 0;
+}
+
+.middle-row {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  background-color: #fff;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1), 0px 1px 3px rgba(0, 0, 0, 0.08);
+  border-radius: 2px;
+  width: 90%;
+  margin-top: 10px;
+}
+
+.middle-row .sub-con {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 4px;
+  width: 30%;
+  height: 60px;
+  padding-top: 10px;
+}
+
+.sub-con p {
+  font-size: 12px;
+  color: black;
+}
+
+.row-2 {
+  display: flex;
+  flex-direction: column;
+  width: 100%; /* Automatically takes the width of the small column */
+  height: 100%;
+  padding-top: 40px;
+}
+
+.row-2 .sub-row2 {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.229);
+  padding: 10px 5px;
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer; /* Make rows clickable */
+}
+
+.sub-row2 .subrow-left {
+  display: flex;
+  align-items: center;
+}
+
+.subrow-left h5 {
+  margin: 0;
+  font-size: 16px;
+}

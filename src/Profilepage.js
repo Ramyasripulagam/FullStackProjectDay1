@@ -10,7 +10,7 @@ export default function Profilepage({ closePopup }) {
       <div className="container" onClick={(e) => e.stopPropagation()}> {/* Prevent closing when clicking inside the container */}
         <div className="small-column">
             <div className="back-btn">
-                <Link to="/welcome">
+                <Link to='/welcome'>
                     <FontAwesomeIcon icon={faArrowLeft} style={{ color: "black" }} />
                 </Link>
             </div>

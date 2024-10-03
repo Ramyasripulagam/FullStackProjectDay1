@@ -1,4 +1,5 @@
 
+
 .background {
   position: fixed;
   top: 0;
@@ -39,7 +40,7 @@
 
 .back-btn {
   position: absolute;
-  top: -50px; /* Adjusted position for the back button */
+  top: 0px; /* Adjusted position for the back button */
   left: 10px; /* Adjusted position for the back button */
   font-size: 20px;
 }
@@ -51,7 +52,6 @@
   background: linear-gradient(160deg, #892be2, #f06292);
   border-radius: 5px;
   padding: 20px;
-  margin-top: -70px;
   height:230px;
   width: 350px; /* Set width to take the full container width */
 }

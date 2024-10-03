@@ -2,7 +2,7 @@ import React from "react";
 import "./Profilepage.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faSignOutAlt, faChevronRight, faUserCircle, faShoppingCart, faArrowLeft, faReceipt, faHeart } from "@fortawesome/free-solid-svg-icons";
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 
 export default function Profilepage({ closePopup }) {
   return (

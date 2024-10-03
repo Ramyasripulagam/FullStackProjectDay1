@@ -67,10 +67,10 @@ function LoginPage(){
                 
                 </div>
                 <div className="right-side">
-                    <div className="Sign-con">
+                    <div className="sign-con">
                         <h1>Welcome!</h1>
                         <h2>Don't have an account?</h2>
-                        <div className="signup-btn">
+                        <div className="signup-button">
                             <Link to="/registerpage" className="link">SignUp</Link>
                         </div>
                     </div>

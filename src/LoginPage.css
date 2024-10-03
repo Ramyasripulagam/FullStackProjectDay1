@@ -76,7 +76,7 @@
 .left-side form .hidden{
     visibility: hidden;
 }
-.right-side{
+.container .right-side{
     background-image: url('loginimg.avif');
     background-repeat: no-repeat;
     background-size: cover;
@@ -99,7 +99,7 @@
     gap:10px;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-.sign-con .signup-btn{
+.sign-con .signup-button{
     background-color: #0b0b0b;
     box-shadow:0px 4px 6px -1px rgb(22, 21, 21);
     width:90px;
@@ -110,11 +110,11 @@
     align-items: center;
 
 }
-.sign-con .signup-btn .link{
+.sign-con .signup-button .link{
     color:white;
     text-decoration: none;
 }
-.signup-btn:hover{
+.signup-button:hover{
     background-color: #b19f57;
 }
 

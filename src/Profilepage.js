@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 export default function Profilepage({ closePopup }) {
   return (
     <div className="background" onClick={closePopup}> {/* Background click closes the popup */}
-      <div className="container" onClick={(e) => e.stopPropagation()}> {/* Prevent closing when clicking inside the container */}
+      <div className="pro-container" onClick={(e) => e.stopPropagation()}> {/* Prevent closing when clicking inside the container */}
         <div className="small-column">
             <div className="back-btn">
                 <Link to='/welcome'>

@@ -5,10 +5,8 @@ function StartWelcome(){
     
     return(
         <div className="welcome-page">
-            
-            
             <Navigation/>
-            <div className="Welcome-body">
+            <div className="welcome-body">
                 <div className="body-left">
                     <div className="title">
                     <h1>Discover and Find Your Own Fashion!</h1>

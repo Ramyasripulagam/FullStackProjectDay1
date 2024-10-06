@@ -7,7 +7,7 @@ export default function Profile(){
     const logout=()=>{setGlobalIsLogin(false)}
     useEffect(()=>{
         const name =localStorage.getItem("name");
-        const branch =localStorage.getItem("branch");
+        // const branch =localStorage.getItem("branch");
         console.log(name);
     })
     return(
@@ -29,7 +29,7 @@ export default function Profile(){
                         <h6 style={{color:'rgba(0, 0, 0, 0.464)'}}>Email address</h6>
                         <p>{globalUserObject.email}</p>
                         <h6 style={{color:'rgba(0, 0, 0, 0.464)'}}>Branch</h6>
-                        <p>{globalUserObject.branch}</p>
+                        <p>{globalUserObject.Branch}</p>
                         <h6 style={{color:'rgba(0, 0, 0, 0.464)'}}>Year</h6>
                         <p>{globalUserObject.year}</p>
                         <h6 style={{color:'rgba(0, 0, 0, 0.464)'}}>Gender</h6>

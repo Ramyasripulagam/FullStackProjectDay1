@@ -2,7 +2,6 @@ import { useRef, useState ,useEffect, useContext} from "react";
 import { globalContext } from "./App";
 import "./LoginPage.css";
 import { Link, Navigate } from "react-router-dom";
-import Welcome from "./Welcome";
 
 function LoginPage(){
     // const width=200;

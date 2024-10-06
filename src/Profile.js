@@ -2,8 +2,8 @@ import { useContext, useEffect } from "react";
 import { globalContext } from "./App";
 import Navigation1 from "./Navigation1";
 export default function Profile(){
-    const {globalUserObject,setGlobalUserObject}=useContext(globalContext);
-    const {globalILogin,setGlobalIsLogin}=useContext(globalContext)
+    const {globalUserObject}=useContext(globalContext);
+    const {setGlobalIsLogin}=useContext(globalContext)
     const logout=()=>{setGlobalIsLogin(false)}
     useEffect(()=>{
         const name =localStorage.getItem("name");
@@ -29,7 +29,7 @@ export default function Profile(){
                         <h6 style={{color:'rgba(0, 0, 0, 0.464)'}}>Email address</h6>
                         <p>{globalUserObject.email}</p>
                         <h6 style={{color:'rgba(0, 0, 0, 0.464)'}}>Branch</h6>
-                        <p>{globalUserObject.Branch}</p>
+                        <p>{globalUserObject.branch}</p>
                         <h6 style={{color:'rgba(0, 0, 0, 0.464)'}}>Year</h6>
                         <p>{globalUserObject.year}</p>
                         <h6 style={{color:'rgba(0, 0, 0, 0.464)'}}>Gender</h6>

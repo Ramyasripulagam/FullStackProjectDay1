@@ -20,7 +20,7 @@ function StartWelcome(){
                 </div>
                 <div className="body-right">
                     <div className="background-img"></div>
-                    <div className="image"><img src="https://t3.ftcdn.net/jpg/02/89/88/94/360_F_289889453_guDc5hrax0yi4kOBIeNSSrxiWpoNRtXx.webp"></img></div>
+                    <div className="image"><img src="https://t3.ftcdn.net/jpg/02/89/88/94/360_F_289889453_guDc5hrax0yi4kOBIeNSSrxiWpoNRtXx.webp" alt='logo'></img></div>
                 </div>
             </div>
             

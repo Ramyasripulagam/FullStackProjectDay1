@@ -1,10 +1,7 @@
-import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { TbShoppingBagSearch } from "react-icons/tb";
-import { globalContext} from "./App";
 
 function Navigation(){
-    const {globalCount,setGlobalCount}=useContext(globalContext)
     return(
         <div style={{display:'flex',flexDirection:'row',flexWrap:'wrap',justifyContent:'space-evenly',backgroundColor:'#ffd633',padding:'15px',fontFamily:'serif'}}>
             <div><h4 style={{marginTop:'4px',fontWeight:'bold'}}>EcoRa</h4></div>

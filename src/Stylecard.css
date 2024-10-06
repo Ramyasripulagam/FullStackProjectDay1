@@ -61,9 +61,13 @@ img{
     text-decoration:line-through;
 }
 .btn{
-    border:none;
+    border: none;
     margin-left: -9px;
     margin-top: -10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
 }
 .btn button{
     background-color: #f3cf40;
@@ -71,6 +75,8 @@ img{
     border-radius: 50px;
     width:190px;
     height:35px;
+    border: 1px solid ;
+
 }
 button:hover{
     background-color: #060605;
@@ -78,6 +84,14 @@ button:hover{
 }
 .checked{
     color:#f3cf40;
+}
+
+.btn h4{
+    margin:5px 10px 0px 10px ;
+}
+.btn .Inc-dec-btn{
+    width:50px;
+    border-radius: 5px;
 }
 
 @media (max-width:500px){

@@ -1,8 +1,8 @@
 import React from "react";
 import "./Profilepage.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {faSignOutAlt, faChevronRight, faUserCircle, faShoppingCart, faArrowLeft, faReceipt, faHeart } from "@fortawesome/free-solid-svg-icons";
-import { Link, Navigate } from "react-router-dom";
+import {faInfoCircle,faHeadset,faSignOutAlt, faChevronRight, faUserCircle, faShoppingCart, faArrowLeft, faReceipt, faHeart } from "@fortawesome/free-solid-svg-icons";
+import { Link} from "react-router-dom";
 
 export default function Profilepage({ closePopup }) {
   return (
@@ -49,26 +49,32 @@ export default function Profilepage({ closePopup }) {
                 <h5>My Account</h5>
               </div>
               <div>
+                <Link to='/profile'>
                 <FontAwesomeIcon icon={faChevronRight} style={{ fontSize: "19px", padding: "4px" }} color="rgb(0,0,0,0.5)" />
+                </Link>
               </div>
             </div>
             {/* Repeat similar rows */}
             <div className="sub-row2">
               <div className="subrow-left">
-                <FontAwesomeIcon icon={faUserCircle} style={{ fontSize: "19px", padding: "4px", paddingRight: "20px" }} color="rgb(0,0,0,0.5)" />
+                <FontAwesomeIcon icon={faHeadset} style={{ fontSize: "19px", padding: "4px", paddingRight: "20px" }} color="rgb(0,0,0,0.5)" />
                 <h5>Customer care</h5>
               </div>
               <div>
+                <Link to='/'>
                 <FontAwesomeIcon icon={faChevronRight} style={{ fontSize: "19px", padding: "4px" }} color="rgb(0,0,0,0.5)" />
+                </Link>
               </div>
             </div>
             <div className="sub-row2">
               <div className="subrow-left">
-                <FontAwesomeIcon icon={faUserCircle} style={{ fontSize: "19px", padding: "4px", paddingRight: "20px" }} color="rgb(0,0,0,0.5)" />
-                <h5>My Profile</h5>
+                <FontAwesomeIcon icon={faInfoCircle} style={{ fontSize: "19px", padding: "4px", paddingRight: "20px" }} color="rgb(0,0,0,0.5)" />
+                <h5>About Us</h5>
               </div>
               <div>
+                <Link to='/'>
                 <FontAwesomeIcon icon={faChevronRight} style={{ fontSize: "19px", padding: "4px" }} color="rgb(0,0,0,0.5)" />
+                </Link>
               </div>
             </div>
             <div className="sub-row2">
@@ -77,7 +83,9 @@ export default function Profilepage({ closePopup }) {
               <h5>Logout</h5>
               </div>
               <div>
+                <Link to='/'>
                 <FontAwesomeIcon icon={faChevronRight} style={{ fontSize: "19px", padding: "4px" }} color="rgb(0,0,0,0.5)" />
+                </Link>
               </div>
             </div>
           </div>

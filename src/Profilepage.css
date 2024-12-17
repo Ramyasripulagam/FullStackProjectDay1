@@ -1,5 +1,4 @@
-
-
+/* Background overlay and popup styling */
 .background {
   position: fixed;
   top: 0;
@@ -7,44 +6,61 @@
   width: 100vw;
   height: 100vh;
   background: rgba(0, 0, 0, 0.5); /* Dark translucent overlay */
-  backdrop-filter: blur(8px); /* Blurry background effect */
-  z-index: 1; /* Ensure the popup is above the content */
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
+/* Apply blur effect only when 'blur' class is present */
+.blur {
+  backdrop-filter: blur(8px);
+}
+
+/* Hide background when popup is closed */
+.hidden {
+  display: none;
+  z-index: -1;
+}
+
+/* Popup container styling */
 .pro-container {
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.452);
   width: 90%; /* Increased width for larger screens */
-  max-width: 400px; /* Restrict maximum width */
+  max-width: 400px;
   background-color: white;
   border-radius: 10px;
   padding: 20px;
   z-index: 2; /* Keep the container above the background */
-  position: relative; /* Relative positioning to allow absolute children */
+  position: relative;
 }
 
+/* Profile image and back button container */
 .small-column {
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: relative; /* To properly position back button within container */
+  position: relative;
 }
 
+/* Profile image styling */
 .small-column img {
   width: 70px;
   height: 70px;
   border-radius: 50%;
 }
 
+/* Back button styling */
 .back-btn {
   position: absolute;
-  top: 0px; /* Adjusted position for the back button */
-  left: 10px; /* Adjusted position for the back button */
+  top: 10px;
+  left: 10px;
   font-size: 20px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
 }
 
+/* Styling for the rows and content */
 .row-1 {
   display: flex;
   flex-direction: column;
@@ -52,15 +68,17 @@
   background: linear-gradient(160deg, #892be2, #f06292);
   border-radius: 5px;
   padding: 20px;
-  height:230px;
-  width: 350px; /* Set width to take the full container width */
+  width: 350px;
+  height: 230px;
 }
 
-.row-1 h4, .row-1 p {
-  color: white; /* Make the text color white to stand out */
+.row-1 h4,
+.row-1 p {
+  color: white;
   margin: 5px 0;
 }
 
+/* Middle row with sub containers */
 .middle-row {
   display: flex;
   justify-content: space-around;
@@ -76,8 +94,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  border-radius: 4px;
   width: 30%;
   height: 60px;
   padding-top: 10px;
@@ -88,11 +104,11 @@
   color: black;
 }
 
+/* Row 2 with additional user information */
 .row-2 {
   display: flex;
   flex-direction: column;
-  width: 100%; /* Automatically takes the width of the small column */
-  height: 100%;
+  width: 100%;
   padding-top: 40px;
 }
 
@@ -103,7 +119,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  cursor: pointer; /* Make rows clickable */
+  cursor: pointer;
 }
 
 .sub-row2 .subrow-left {
